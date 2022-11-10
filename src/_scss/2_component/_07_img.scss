@@ -1,0 +1,130 @@
+/*------------------------------------------------------------
+img
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-img {
+    &__water {
+        left: 78px;
+        top: 1px;
+
+        @include sp {
+            left: 23.5%;
+            top: 20.5%;
+            width: 30px;
+        }
+    }
+
+    &__labelwater {
+        top: -51px;
+        left: 29px;
+
+        @include sp {
+            width: 132.5px;
+            left: 7%;
+            top: 11.5%;
+        }
+    }
+
+
+    &__bugspray {
+        left: 20px;
+        top: 42px;
+
+        @include sp {
+            width: 35px;
+            left: 81%;
+            top: 92%;
+        }
+    }
+
+    &__linenwater {
+        left: 19px;
+        top: 41px;
+
+        @include sp {
+            width: 46px;
+            transform: rotateY(180deg);
+            left: 8%;
+            top: 101%;
+        }
+    }
+
+    &__airfreshener {
+        left: -2px;
+        top: 0;
+
+        @include sp {
+            width: 30px;
+            left: 67%;
+            top: 121%;
+        }
+    }
+
+    &__labelairfreshener {
+        top: -53px;
+        left: -58px;
+
+        @include sp {
+            width: 139px;
+            left: 50%;
+            top: 80%;
+        }
+    }
+
+    &__coolingspray {
+        left: 92px;
+        top: 66px;
+
+        @include sp {
+            width: 37px;
+            left: 8%;
+            top: 149%;
+        }
+    }
+
+    &__mask {
+        left: 43px;
+        bottom: -17px;
+
+        @include sp {
+            width: 110px;
+            left: 57%;
+            bottom: -190%;
+        }
+    }
+
+    &__labelmask {
+        left: 43px;
+        top: 60px;
+
+        @include sp {
+            width: 107px;
+            left: 48%;
+            top: 143%;
+        }
+    }
+
+    &__pillow {
+        left: 96px;
+        top: 89px;
+
+        @include sp {
+            width: 64px;
+            left: 10%;
+            top: 197%;
+        }
+    }
+
+    &__bath {
+        left: 39px;
+        top: 2px;
+
+        @include sp {
+            width: 80px;
+            left: 66%;
+            top: 168%;
+        }
+    }
+}

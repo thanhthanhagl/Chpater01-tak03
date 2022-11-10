@@ -1,0 +1,52 @@
+<header class="c-header">
+  <nav class="c-header__gnav">
+    <ul>
+      <% if (typeof linklists != 'undefined') { %>
+        <% linklists.main && linklists.main.forEach(link => { %>
+          <li class="c-gnav__nav">
+            <a class="c-gnav__link" <% if (link.current || link.active) { %>class="is-active"<% } %> href="<%= link.url %>"><%= link.title %></a>
+            <% if (link.links) { %>
+              <ul>
+                <% link.links.forEach(child_link => { %>
+                  <li class="c-gnav__childnav">
+                    <a class="c-gnav__childlink" <% if (child_link.current) { %>class="is-active"<% } %> href="<%= child_link.url %>"><%= child_link.title %></a>
+                  </li>
+                <% }) %>
+              </ul>
+            <% } %>
+          </li>
+        <% }) %>
+      <% } %> 
+    </ul>
+  </nav>
+  <label for="c-input__icon" class="c-gnavmb__iconmenu c-sp">
+    <img src="../assets/img/iconmenu.png" alt="iconmenu">
+  </label>
+  <input type="checkbox" hidden name="checkbox" class="c-input" id="c-input__icon">
+  <label for="c-input__icon" class="c-header__overlay c-overlay"></label>
+  <nav class="c-gnavmb">
+    <img class="c-fixed__top" src="../assets/img/fixed-top.png" alt="leaf top">
+    <img class="c-fixed__bottom" src="../assets/img/fixed-bottom.png" alt="leaf bottom">
+    <label for="c-input__icon" class="c-gnavmb__iconmenuac c-sp">
+      <img src="../assets/img/iconmenu1.png" alt="iconmenu">
+    </label>
+    <ul class="c-overlay__content">
+      <% if (typeof linklists != 'undefined') { %>
+        <% linklists.main && linklists.main.forEach(link => { %>
+          <li class="c-gnavmb__navmb">
+            <a class="c-gnavmb__linkmb" <% if (link.current || link.active) { %>class="is-active"<% } %> href="<%= link.url %>"><%= link.title %></a>
+            <% if (link.links) { %>
+              <ul>
+                <% link.links.forEach(child_link => { %>
+                  <li class="c-gnavmb__childnavmb">
+                    <a class="c-gnavmb__childlinkmb" <% if (child_link.current) { %>class="is-active"<% } %> href="<%= child_link.url %>"><%= child_link.title %></a>
+                  </li>
+                <% }) %>
+              </ul>
+            <% } %>
+          </li>
+        <% }) %>
+      <% } %> 
+    </ul>
+  </nav>
+</header>

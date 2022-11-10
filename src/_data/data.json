@@ -1,0 +1,30 @@
+{
+  "linklists": {
+    "main": [
+      {
+        "title": "トップ",
+        "url": "#p-banner"
+      },
+      {
+        "title": "毎日にハッカ油",
+        "url": "#p-products"
+      },
+      {
+        "title": "製品情報",
+        "url": "#p-point"        
+      },
+      {
+        "title": "Q&A",
+        "url": "#p-qna"
+      },
+      {
+        "title": "ハッカ油コラム",
+        "url": "#p-blog"
+      },
+      {
+        "title": "ハッカ油ムービー",
+        "url": "#p-cta"
+      }
+    ]
+  }
+}

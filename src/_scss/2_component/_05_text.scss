@@ -1,0 +1,99 @@
+/*------------------------------------------------------------
+text
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-text {
+    &__water {
+        left: 133px;
+        top: 35px;
+
+        @include sp {
+            left: 34%;
+            top: 27%;
+        }
+    }
+
+    &__bugspray {
+        left: 69px;
+        top: 77px;
+
+        @include sp {
+            left: 26.5%;
+            top: 131%;
+            padding-left: 0 !important;
+            padding-right: 10px;
+        }
+    }
+
+    &__linenwater {
+        top: 77px;
+        left: 103px;
+
+        @include sp {
+            left: 17%;
+            letter-spacing: 2px;
+            top: 130%;
+        }
+    }
+
+    &__airfreshener {
+        top: 54.5px;
+        left: 43px;
+
+        @include sp {
+            left: 4.3%;
+            top: 179%;
+            padding-left: 0 !important;
+            right: 33.2%;
+            letter-spacing: 1.7px;
+        }
+    }
+
+    &__coolingspray {
+        right: -25px;
+        top: 87px;
+
+        @include sp {
+            letter-spacing: 2px;
+            top: 182%;
+            right: 29.5%;
+        }
+    }
+
+    &__mask {
+        right: 0;
+        bottom: 3px;
+        transform: translateX(1px);
+
+        @include sp {
+            right: 34%;
+            padding-left: 0 !important;
+            bottom: -147%;
+            padding-right: 30px;
+        }
+    }
+
+    &__pillow {
+        left: -1px;
+        top: 105px;
+
+        @include sp {
+            left: 28%;
+            top: 209%;
+            padding-right: 0 !important;
+            padding-left: 15px;
+        }
+    }
+
+    &__bath {
+        left: -87px;
+        top: 19px;
+
+        @include sp {
+            left: 30.5%;
+            top: 195%;
+        }
+    }
+}
