@@ -10,18 +10,18 @@ text
         top: 35px;
 
         @include sp {
-            left: 34%;
-            top: 27%;
+            left: 32%;
+            top: 26.5%;
         }
     }
 
     &__bugspray {
-        left: 69px;
+        left: 67px;
         top: 77px;
 
         @include sp {
-            left: 26.5%;
-            top: 131%;
+            left: 25.3%;
+            top: 129%;
             padding-left: 0 !important;
             padding-right: 10px;
         }
@@ -29,12 +29,12 @@ text
 
     &__linenwater {
         top: 77px;
-        left: 103px;
+        left: 105px;
 
         @include sp {
-            left: 17%;
+            left: 16.3%;
             letter-spacing: 2px;
-            top: 130%;
+            top: 129%;
         }
     }
 
@@ -43,8 +43,8 @@ text
         left: 43px;
 
         @include sp {
-            left: 4.3%;
-            top: 179%;
+            left: 4%;
+            top: 176%;
             padding-left: 0 !important;
             right: 33.2%;
             letter-spacing: 1.7px;
@@ -54,11 +54,19 @@ text
     &__coolingspray {
         right: -25px;
         top: 87px;
+        padding-left: 10px;
+        @include tab {
+            padding-left: 0;
+            right: unset;
+            left: 120px;
+        }
 
         @include sp {
+            left: unset;
+            padding-left: 10px;
             letter-spacing: 2px;
-            top: 182%;
-            right: 29.5%;
+            top: 181%;
+            right: 32.7%;
         }
     }
 
@@ -66,9 +74,14 @@ text
         right: 0;
         bottom: 3px;
         transform: translateX(1px);
+        @include tab {
+            right: unset;
+            left: 157px;
+        }
 
         @include sp {
-            right: 34%;
+            left: unset;
+            right: 37%;
             padding-left: 0 !important;
             bottom: -147%;
             padding-right: 30px;
@@ -80,8 +93,8 @@ text
         top: 105px;
 
         @include sp {
-            left: 28%;
-            top: 209%;
+            left: 26.5%;
+            top: 207%;
             padding-right: 0 !important;
             padding-left: 15px;
         }
@@ -92,8 +105,8 @@ text
         top: 19px;
 
         @include sp {
-            left: 30.5%;
-            top: 195%;
+            left: 29%;
+            top: 192%;
         }
     }
 }

@@ -19,7 +19,7 @@
       <% } %> 
     </ul>
   </nav>
-  <label for="c-input__icon" class="c-gnavmb__iconmenu c-sp">
+  <label for="c-input__icon" class="c-gnavmb__iconmenu c-tab">
     <img src="../assets/img/iconmenu.png" alt="iconmenu">
   </label>
   <input type="checkbox" hidden name="checkbox" class="c-input" id="c-input__icon">
@@ -27,10 +27,10 @@
   <nav class="c-gnavmb">
     <img class="c-fixed__top" src="../assets/img/fixed-top.png" alt="leaf top">
     <img class="c-fixed__bottom" src="../assets/img/fixed-bottom.png" alt="leaf bottom">
-    <label for="c-input__icon" class="c-gnavmb__iconmenuac c-sp">
+    <label for="c-input__icon" class="c-gnavmb__iconmenuac c-tab">
       <img src="../assets/img/iconmenu1.png" alt="iconmenu">
     </label>
-    <ul class="c-overlay__content">
+    <ul class="c-gnavmb__content">
       <% if (typeof linklists != 'undefined') { %>
         <% linklists.main && linklists.main.forEach(link => { %>
           <li class="c-gnavmb__navmb">

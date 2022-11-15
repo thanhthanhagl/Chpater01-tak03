@@ -21,7 +21,6 @@ body {
 
 //-------------------------------------------------------
 main {
-    // padding: 0px 0 100px;
     background-color: rgb(255, 255, 255);
 }
 
@@ -36,7 +35,6 @@ main {
         padding: 0;
     }
 }
-
 
 //-------------------------------------------------------
 @keyframes bubble {
@@ -100,9 +98,13 @@ main {
             top: -40px;
         }
 
+        @include tab {
+            width: 200px;
+        }
+
         @include sp {
             width: 113px;
-            left: 25.4%;
+            left: 25.5%;
 
             &.is-scroll {
                 top: -20px;
@@ -124,9 +126,13 @@ main {
             right: -40px;
         }
 
+        @include tab {
+            width: 200px;
+        }
+
         @include sp {
             width: 93px;
-            top: 57.1%;
+            top: 61.5%;
 
             &.is-scroll {
                 right: -20px;
@@ -204,6 +210,7 @@ main {
     position: relative;
     max-width: 1120px;
     margin: 0 auto;
+
     @include tab {
         padding: 0 30px;
     }
@@ -215,7 +222,7 @@ main {
 
     &__img {
         @include sp {
-            max-width: 750px;
+            border-radius: 0 0 25px 25px;
         }
     }
 
@@ -237,18 +244,16 @@ main {
             bottom: 0;
             transform: translate(-50%, -50%);
         }
+    }
 
-        img {
-            @include tab {
-                max-width: 45%;
-            }
+    &__innerimg {
+        @include tab {
+            max-width: 45%;
+        }
 
-            &:last-child {
-                @include sp {
-                    max-width: 43%;
-                    margin: -7% 28.5%;
-                }
-            }
+        @include sp {
+            max-width: 43%;
+            margin: -7% 28.5%;
         }
     }
 
@@ -257,12 +262,12 @@ main {
         background-color: rgb(37, 169, 137);
         width: 306px;
         height: 55px;
-        border-radius: 30px;
+        border-radius: 28px;
         margin: 13px 14px;
 
         @include sp {
-            width: 60.4%;
-            height: 35.5px;
+            width: 60%;
+            height: 35px;
             margin: 5% 20%;
         }
     }
@@ -273,11 +278,12 @@ main {
         text-align: center;
         display: block;
         line-height: 2.5;
-        transform: translate(2px, -2px);
-        letter-spacing: 0.2em;
+        transform: translate(3px, -2px);
+        letter-spacing: 5px;
 
         @include sp {
             font-size: 1.6rem;
+            letter-spacing: 3.5px;
         }
     }
 
@@ -295,7 +301,7 @@ main {
 
         @include sp {
             width: 42.5px;
-            margin: 13% 44% 4%;
+            margin: 7% 44% 3%;
         }
     }
 
@@ -316,7 +322,7 @@ main {
 
         @include sp {
             font-size: 1.5rem;
-            margin-top: 3%;
+            margin-top: 4%;
             letter-spacing: 0;
         }
     }
@@ -325,6 +331,7 @@ main {
         font-size: 3rem;
         margin-top: -10px;
         letter-spacing: 2.9px;
+        font-weight: 400;
 
         @include sp {
             font-size: 2rem;
@@ -356,24 +363,31 @@ main {
 .c-product {
     max-width: 1120px;
     width: 100%;
-    margin: 70px auto;
+    margin: 70px auto 137px;
     position: relative;
 
     @include tab {
         padding: 0 100px;
+        margin-top: 20px;
+        margin-bottom: 0;
     }
 
     @include sp {
         padding: 0 15px;
-        margin-bottom: 163px;
+        margin-bottom: 165px;
     }
 
     &__heading {
         color: #000;
         text-align: center;
 
+        @include tab {
+            margin-bottom: 60px;
+        }
+
         @include sp {
             margin-top: -27.5%;
+            margin-bottom: 0;
         }
     }
 
@@ -392,6 +406,7 @@ main {
         font-size: 4.6rem;
         letter-spacing: 0.2em;
         line-height: 0.9;
+        font-weight: 400;
 
         @include sp {
             font-size: 2rem;
@@ -411,6 +426,10 @@ main {
         max-width: 1120px;
         width: 100%;
         margin: 0 auto;
+
+        @include sp {
+            width: 330px;
+        }
     }
 
     &__product {
@@ -565,11 +584,13 @@ main {
     &__name {
         position: absolute;
         display: block;
-        border-bottom: 2px dashed rgb(85, 85, 85);
+        border-bottom: 1px dashed rgb(85, 85, 85);
+        font-weight: 400;
+        line-height: 2;
 
-        @include sp {
+        @include tab {
             font-size: 1.3rem;
-            line-height: 1.3;
+            line-height: 1.5;
             border-bottom: 1px dashed rgb(183, 183, 183);
         }
     }
@@ -588,22 +609,26 @@ main {
     width: 100%;
     background-image: url("../assets/img/bg-point.jpg");
     background-repeat: repeat;
-    margin-top: 137px;
+    // margin-top: 137px;
     padding: 99px 0 97px;
 
     @include sp {
         padding: 11% 0 13.5%;
-        margin-top: 0;
+        // margin-top: 0;
     }
 
     &__item {
-        max-width: 1033px;
+        max-width: 1030px;
         margin: 0 auto 65px;
 
         @include sp {
             margin: 0 auto 12px;
             max-width: 375px;
         }
+    }
+
+    &__left {
+        margin-left: -2px;
     }
 
     &__heading {
@@ -614,12 +639,6 @@ main {
         @include sp {
             margin-left: 7.5%;
             column-gap: 15px;
-        }
-    }
-
-    &__right {
-        @include sp {
-            transform: translate(-20.5px, 19.5px);
         }
     }
 
@@ -638,7 +657,7 @@ main {
         transform: translateX(-7px);
 
         @include sp {
-            margin: 10px auto -2px;
+            margin: 9px auto -2px;
             transform: translateX(-15px);
         }
     }
@@ -657,6 +676,7 @@ main {
 
     &__title {
         font-size: 3.6rem;
+        font-weight: 400;
         color: $main-color;
         line-height: 1.1;
         letter-spacing: 0.1em;
@@ -665,7 +685,14 @@ main {
         @include sp {
             font-size: 2rem;
             letter-spacing: 2px;
-            line-height: 1.3;
+            line-height: 1.5;
+            transform: translate(-26px, 19px);
+        }
+    }
+
+    &__title--sp {
+        @include sp {
+            transform: translate(-21px, 17px);
         }
     }
 
@@ -716,6 +743,12 @@ main {
             padding: 23px 15px;
             width: 360px;
             justify-content: space-between;
+        }
+    }
+
+    &__list--edit {
+        @include sp {
+            padding: 26px 15px 20px;
         }
     }
 
@@ -776,8 +809,8 @@ main {
 
         @include sp {
             right: 9%;
-            bottom: 9%;
-            width: 19%;
+            bottom: 9.5%;
+            width: 62px;
         }
     }
 
@@ -790,15 +823,20 @@ main {
         padding: 50px 45px;
         max-width: 290px;
         height: 290px;
-        opacity: 0.8;
         background-color: rgb(255, 255, 255);
+
+        @include tab {
+            top: 4%;
+            left: 4%;
+        }
 
         @include sp {
             border-radius: 4%;
-            top: 5%;
-            right: 5%;
+            top: 4%;
+            right: 8%;
+            left: 4.5%;
             padding: 50px 20px;
-            max-width: 300px;
+            width: 288px;
             height: 285px;
         }
     }
@@ -806,14 +844,14 @@ main {
     &__feature {
         color: $main-color;
         font-size: 2.4rem;
+        font-weight: 400;
         letter-spacing: 0.1em;
         line-height: 1;
         text-align: center;
-        transform: translateX(2px);
 
         @include sp {
             font-size: 1.6rem;
-            transform: translateX(-8px);
+            transform: translateX(-3px);
             line-height: 1.7;
         }
     }
@@ -826,7 +864,7 @@ main {
         margin: 18px auto 17px;
 
         @include sp {
-            transform: translateX(-7px);
+            transform: translateX(-5px);
         }
     }
 
@@ -838,9 +876,8 @@ main {
 
         @include sp {
             font-size: 1.3rem;
-            transform: translate(-1px, 4px);
+            transform: translate(-1px, 6px);
             display: block;
-            margin-right: 6px;
         }
     }
 
@@ -872,9 +909,9 @@ main {
         @include sp {
             font-size: 1.3rem;
             padding: 2px 0;
-            margin: 23px 55px;
-            width: 50.5%;
-            height: 23px;
+            margin: 21px 56px;
+            width: 131px;
+            height: 26px;
         }
     }
 }
@@ -884,14 +921,16 @@ main {
     @include tab {
         padding: 0 30px;
     }
+
     @include sp {
         padding: 0 15px;
-        margin: -10px auto -2px;
+        margin: -10px auto 4px;
     }
 
     &__title {
         color: $main-color;
         font-size: 3rem;
+        font-weight: 400;
         letter-spacing: 3px;
         line-height: 1.5;
         text-align: center;
@@ -901,7 +940,7 @@ main {
             font-size: 1.8rem;
             letter-spacing: 1.6px;
             line-height: 0.8;
-            transform: translate(-1px, 2px);
+            transform: translate(0, 4px);
         }
     }
 
@@ -913,7 +952,7 @@ main {
         margin: 40px auto;
 
         @include sp {
-            margin: 32px auto;
+            margin: 34px auto -11px;
             padding: 0 15px;
             max-width: 375px;
         }
@@ -941,6 +980,7 @@ main {
     &__website {
         font-size: 1.2rem;
         letter-spacing: 1.4px;
+        color: $text-color;
         line-height: 1;
         text-align: center;
         margin: 0 auto;
@@ -950,8 +990,7 @@ main {
             font-size: 1.3rem;
             line-height: 1.7;
             letter-spacing: 1.2px;
-            padding: 10px 0;
-            margin-top: -47px;
+            padding: 5px 0;
             max-width: 375px;
         }
     }
@@ -968,6 +1007,7 @@ main {
 .c-qna {
     padding-top: 67px;
     margin: 0 auto;
+
     @include tab {
         padding: 0 30px;
     }
@@ -996,7 +1036,7 @@ main {
 
     &__svg {
         @include sp {
-            width: 13%;
+            width: 40px;
         }
     }
 
@@ -1052,6 +1092,7 @@ main {
 .c-blog {
     margin: 0 auto;
     padding: 90px 0 60px;
+
     @include tab {
         padding: 0 30px;
     }
@@ -1072,26 +1113,13 @@ main {
             max-width: 250px;
             border-radius: 25px;
         }
+    }
 
-        img {
-            &:first-child {
-                border-radius: 50px;
+    &__textboximg {
+        border-radius: 50px;
 
-                @include sp {
-                    display: none;
-                }
-            }
-        }
-
-        img {
-            &:last-child {
-                display: none;
-
-                @include sp {
-                    display: block;
-                    border-radius: 25px;
-                }
-            }
+        @include sp {
+            border-radius: 25px;
         }
     }
 
@@ -1115,12 +1143,8 @@ main {
             padding: 0 15px;
             border-bottom: 0;
             margin-bottom: 40px;
-        }
-    }
 
-    &__post {
-        @include sp {
-            &:nth-child(n+3) {
+            &:nth-child(n+4) {
                 display: none;
             }
         }
@@ -1130,6 +1154,7 @@ main {
         display: flex;
         column-gap: 15px;
         position: relative;
+        align-items: center;
 
         @include sp {
             column-gap: 10px;
@@ -1153,7 +1178,6 @@ main {
 
     &__featureimg {
         width: 275px;
-        height: 100px;
         border-radius: 10px;
 
         @include sp {
@@ -1168,11 +1192,10 @@ main {
     }
 
     &__subtitle {
-        margin-top: 22px;
-        letter-spacing: -1px;
+        margin-top: 10px;
+        letter-spacing: 1.2px;
         font-weight: 400;
         line-height: 1.5;
-        transform: translateX(-1px);
 
         @include sp {
             font-size: 1.1rem;
@@ -1186,7 +1209,7 @@ main {
         font-size: 2.5rem;
         letter-spacing: 2.5px;
         font-weight: 400;
-        margin-top: -11px;
+        margin-top: -10px;
 
         @include sp {
             font-size: 1.5rem;
@@ -1224,7 +1247,7 @@ main {
             line-height: 1.7;
             letter-spacing: 0;
             text-decoration: underline;
-            text-underline-offset: 2px;
+            text-underline-offset: 3px;
             margin-top: 9px;
             margin-bottom: 4px;
         }
@@ -1236,7 +1259,7 @@ main {
         @include sp {
             display: block;
             background-color: $main-color;
-            border-radius: 7.5px;
+            border-radius: 8px;
             width: 100%;
             height: 20px;
             padding: 3px 1px;
@@ -1257,6 +1280,7 @@ main {
     padding: 5px 0;
     max-width: 1030px;
     margin: 0 auto;
+
     @include tab {
         padding: 0 30px;
     }
@@ -1267,24 +1291,28 @@ main {
     }
 
     &__img {
-        &:first-child {
-            border-radius: 50px;
+        border-radius: 50px;
 
-            @include sp {
-                display: none;
-            }
+        @include sp {
+            margin: 0 auto;
+            max-width: 250px;
+            display: block;
+            border-radius: 25px;
         }
+    }
+}
 
-        &:last-child {
-            display: none;
+.c-pc {
+    @include sp {
+        display: none;
+    }
+}
 
-            @include sp {
-                margin: 0 auto;
-                max-width: 250px;
-                display: block;
-                border-radius: 25px;
-            }
-        }
+.c-tab {
+    display: none;
+
+    @include tab {
+        display: block;
     }
 }
 
@@ -1295,10 +1323,4 @@ main {
         display: block;
     }
 
-}
-
-.c-pc {
-    @include sp {
-        display: none;
-    }
 }

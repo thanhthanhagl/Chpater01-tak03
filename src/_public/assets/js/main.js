@@ -1,3 +1,5 @@
+//const { Value } = require("sass");
+
 //console.log("main.js");
 $(document).ready(function () {
     function testanimation() {
@@ -12,6 +14,18 @@ $(document).ready(function () {
             $('.c-leaf__right').removeClass('is-scroll');
         }
     }
+    //----------- nav scroll ------------------
+    $(window).scroll(function () {
+        var scrollDistance = $(window).scrollTop();
+        // Assign active class to nav links while scolling
+        $('.page-section').each(function (i) {
+            if ($(this).position().top <= scrollDistance) {
+                $('.c-gnav__link').removeClass('is-active');
+                $('.c-gnav__link').eq(i).addClass('is-active');
+            }
+        });
+    }).scroll();
+
     //------------------Animation bubble and leaf--------------------//
     $(window).scroll(function () {
         testanimation();
@@ -19,10 +33,10 @@ $(document).ready(function () {
     //-------------------Menu mobile---------------------------//
     $("#c-input__icon").click(function () {
         $(".c-header__overlay").toggleClass("active");
-        $('html').toggleClass("u-overflow");
+        $('p-top').toggleClass("u-overflow");
     });
     $(".c-gnavmb__navmb").click(function () {
-        $(".c-header__overlay").removeClass("active");
+        $(".c-input").prop("checked", false);        
     });
     //-------------------Button show class-------------------//
 
@@ -38,13 +52,9 @@ $(document).ready(function () {
     });
 
     //---------------------slick slider-----------------------//
-    setslide();
-    $(window).resize(function () {
-        setslide();
-    });
     function setslide() {
         if ($(window).width() <= 767) {
-            $('.c-point__list').slick({
+            $('.c-point__list').not('.slick-initialized').slick({
                 infinite: true,//loop
                 dots: false,
                 arrows: false,
@@ -53,16 +63,24 @@ $(document).ready(function () {
                 slidesToShow: 1,
                 slidesToScroll: 1
             });
-        } else {
-            $('.c-point__list').slick("unslick");
+        }
+        else {
+            $('.c-point__list.slick-initialized').slick('unslick');
         }
     }
+
+    $(window).on('resize', function () {
+        setslide();
+    });
+    $(window).on('load', function () {
+        setslide();
+    });
     //------------------- accordition -------------------//
-    $('.c-blog__toggle').click(function(){
+    $('.c-blog__toggle').click(function () {
         //Xoay chieu button
         $(this).toggleClass('is-toggle');
         //Tim class cha cua toggle, trong class cha tim class desc
         $(this).parent().children('.c-blog__desc').slideToggle();
     });
-    
+
 });
