@@ -19,9 +19,11 @@ $(document).ready(function () {
         var scrollDistance = $(window).scrollTop();
         // Assign active class to nav links while scolling
         $('.page-section').each(function (i) {
-            if ($(this).position().top <= scrollDistance) {
+            if ($(this).position().top <= scrollDistance + 400) {
                 $('.c-gnav__link').removeClass('is-active');
                 $('.c-gnav__link').eq(i).addClass('is-active');
+                $('.c-gnavmb__linkmb').removeClass('is-active');
+                $('.c-gnavmb__linkmb').eq(i).addClass('is-active');
             }
         });
     }).scroll();
@@ -33,10 +35,11 @@ $(document).ready(function () {
     //-------------------Menu mobile---------------------------//
     $("#c-input__icon").click(function () {
         $(".c-header__overlay").toggleClass("active");
-        $('p-top').toggleClass("u-overflow");
+        $('body').toggleClass("u-overflow");
     });
     $(".c-gnavmb__navmb").click(function () {
-        $(".c-input").prop("checked", false);        
+        $(".c-input").prop("checked", false);     
+        $('body').toggleClass("u-overflow");   
     });
     //-------------------Button show class-------------------//
 

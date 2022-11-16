@@ -62,6 +62,7 @@ footer
         line-height: 1.4;
         letter-spacing: 1.4px;
         margin-top: 9px;
+        color: #282828;
         @include sp {
             font-size: 1rem;
             color: #000;
@@ -69,6 +70,19 @@ footer
             letter-spacing: 1px;
             margin-top: 0;
         }
+    }
+
+    &__contactpc {
+        @include tab {
+            display: none;
+        }
+    }
+
+    &__contacttab {
+        display: none;
+        @include tab {
+            display: block;
+        };
     }
     @include sp {
         padding: 58px 15px 48px;

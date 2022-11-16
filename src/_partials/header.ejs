@@ -4,15 +4,8 @@
       <% if (typeof linklists != 'undefined') { %>
         <% linklists.main && linklists.main.forEach(link => { %>
           <li class="c-gnav__nav">
-            <a class="c-gnav__link" <% if (link.current || link.active) { %>class="is-active"<% } %> href="<%= link.url %>"><%= link.title %></a>
-            <% if (link.links) { %>
-              <ul>
-                <% link.links.forEach(child_link => { %>
-                  <li class="c-gnav__childnav">
-                    <a class="c-gnav__childlink" <% if (child_link.current) { %>class="is-active"<% } %> href="<%= child_link.url %>"><%= child_link.title %></a>
-                  </li>
-                <% }) %>
-              </ul>
+            <a class="c-gnav__link" <% if (link.current || link.active) { %><!--class="is-active"--><% } %> href="<%= link.url %>"><%= link.title %></a>
+            <% if (link.links) { %>              
             <% } %>
           </li>
         <% }) %>
@@ -34,15 +27,8 @@
       <% if (typeof linklists != 'undefined') { %>
         <% linklists.main && linklists.main.forEach(link => { %>
           <li class="c-gnavmb__navmb">
-            <a class="c-gnavmb__linkmb" <% if (link.current || link.active) { %>class="is-active"<% } %> href="<%= link.url %>"><%= link.title %></a>
-            <% if (link.links) { %>
-              <ul>
-                <% link.links.forEach(child_link => { %>
-                  <li class="c-gnavmb__childnavmb">
-                    <a class="c-gnavmb__childlinkmb" <% if (child_link.current) { %>class="is-active"<% } %> href="<%= child_link.url %>"><%= child_link.title %></a>
-                  </li>
-                <% }) %>
-              </ul>
+            <a class="c-gnavmb__linkmb" <% if (link.current || link.active) { %><!--class="is-active"--><% } %> href="<%= link.url %>"><%= link.title %></a>
+            <% if (link.links) { %>              
             <% } %>
           </li>
         <% }) %>
